@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DefaultController!{% endblock %}
+
+{% block body %}
+
+    <div class="container text-center">
+        <div class="farm">
+            <h1 class="mt-5">Liste des <span>🐑</span></h1>
+            <div class="row mt-5 mh-50 border border-danger">
+                <div class="col py-0 my-auto"
+                     id="barn" data-animal="🐑">
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <button class="btn btn-primary js-grow-barn">Grow my barn!</button>
+                </div>
+            </div>
+            <div>
+                <span>🐑</span>
+                <span>🐄</span>
+                <span>🐈</span>
+                <span>🐕</span>
+                <span>🐎</span>
+                <span>🦖</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const barnEl = document.getElementById('barn');
+        const growBarnButton = document.querySelector('.js-grow-barn');
+        growBarnButton.addEventListener('click', (event) => {
+            event.preventDefault();
+
+            barnEl.innerHTML = barnEl.innerHTML + barnEl.dataset.animal;
+        });
+    </script>
+{% endblock %}
