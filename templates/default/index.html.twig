@@ -6,10 +6,10 @@
 
     <div class="container text-center">
         <div class="farm">
-            <h1 class="mt-5">Liste des <span>🐑</span></h1>
+            <h1 class="mt-5">Liste des <span>{{ animal }}</span></h1>
             <div class="row mt-5 mh-50 border border-danger">
                 <div class="col py-0 my-auto"
-                     id="barn" data-animal="🐑">
+                     id="barn" data-animal="{{ animal }}">
                 </div>
             </div>
             <div class="row mt-5">
@@ -17,13 +17,25 @@
                     <button class="btn btn-primary js-grow-barn">Grow my barn!</button>
                 </div>
             </div>
-            <div>
-                <span>🐑</span>
-                <span>🐄</span>
-                <span>🐈</span>
-                <span>🐕</span>
-                <span>🐎</span>
-                <span>🦖</span>
+            <div class="row">
+                <div class="col">
+                    <a href="{{ path('app_default', {animal:'🐑'}) }}" class="btn"><span>🐑</span></a>
+                </div>
+                <div class="col">
+                    <a href="{{ path('app_default', {animal:'🐄'}) }}" class="btn"><span>🐄</span></a>
+                </div>
+                <div class="col">
+                    <a href="{{ path('app_default', {animal:'🐈'}) }}" class="btn"><span>🐈</span></a>
+                </div>
+                <div class="col">
+                    <a href="{{ path('app_default', {animal:'🐕'}) }}" class="btn"><span>🐕</span></a>
+                </div>
+                <div class="col">
+                    <a href="{{ path('app_default', {animal:'🐎'}) }}" class="btn"><span>🐎</span></a>
+                </div>
+                <div class="col">
+                    <a href="{{ path('app_default', {animal:'🦖'}) }}" class="btn"><span>🦖</span></a>
+                </div>
             </div>
         </div>
     </div>
