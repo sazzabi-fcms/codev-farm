@@ -5,15 +5,36 @@
 {% block body %}
 
     <div class="container text-center">
-        <div class="farm" data-controller="farm" data-farm-animal-value="🐑">
-            <h1 class="mt-5">Liste des <span>🐑</span></h1>
+        <div class="farm" data-controller="farm" data-farm-animal-value="{{ animal }}">
+            <h1 class="mt-5">Liste des <span>{{ animal }}</span></h1>
 
             <div class="row mt-5 mh-50 border border-danger">
-                <div class="col py-0 my-auto" data-farm-target="barn">🐑</div>
+                <div class="col py-0 my-auto barn" data-farm-target="barn">{{ animal }}</div>
             </div>
             <div class="row mt-5">
                 <div class="col">
                     <button class="btn btn-primary" data-action="farm#grow">Grow my barn!</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <a class="btn" href="{{ path('app_default', {'animal': '🐑'}) }}"><span>🐑</span></a>
+                </div>
+                <div class="col">
+                    <a class="btn" href="{{ path('app_default', {'animal': '🐄'}) }}"><span>🐄</span></a>
+                </div>
+                <div class="col">
+                    <a class="btn" href="{{ path('app_default', {'animal': '🐈'}) }}"><span>🐈</span></a>
+                </div>
+                <div class="col">
+                    <a class="btn" href="{{ path('app_default', {'animal': '🐕'}) }}"><span>🐕</span></a>
+                </div>
+                <div class="col">
+                    <a class="btn" href="{{ path('app_default', {'animal': '🐎'}) }}"><span>🐎</span></a>
+                </div>
+                <div class="col">
+                    <a class="btn" href="{{ path('app_default', {'animal': '🦖'}) }}"><span>🦖</span></a>
                 </div>
             </div>
         </div>
